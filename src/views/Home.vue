@@ -1,9 +1,11 @@
 <template>
-  <div class="col-md-8">
-    <Map />
-  </div>
-  <div class="col-m-4">
-    <Places />
+  <div class="row">
+    <div class="col-md-8" v-if="store.show">
+      <Map />
+    </div>
+    <div class="col-md-4">
+      <Places />
+    </div>
   </div>
 </template>
 
@@ -23,7 +25,7 @@ export default {
       store,
     };
   },
-  mounted() {
+  created() {
     axios
       .get(
         "https://ipgeolocation.abstractapi.com/v1/?api_key=8a7e5729eb624b5598766419a83486b9"
@@ -53,4 +55,5 @@ export default {
 
 <style scoped>
 @import url("../components/bootstrap.min.css");
+@import url("mapbox-gl-controls/lib/controls.css");
 </style>

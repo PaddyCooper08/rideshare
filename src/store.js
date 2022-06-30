@@ -1,5 +1,5 @@
 // store.js
-import { reactive } from 'vue'
+import { reactive } from "vue";
 
 export const store = reactive({
   city: String,
@@ -7,11 +7,9 @@ export const store = reactive({
   postcode: String,
   lat: String,
   long: String,
-  show: Boolean,
+  show: false,
   start: String,
   eta: Number,
   distance: Number,
-  isData: false
-
-
-})  
+  isData: false,
+});

@@ -1,5 +1,7 @@
 <template>
-  <div id="map"></div>
+  <div class="col-md-8">
+    <div id="map"></div>
+  </div>
 </template>
 <script>
 import { store } from "../store";
@@ -10,7 +12,7 @@ export default {
     };
   },
   methods: {
-    async createMap() {
+    createMap() {
       mapboxgl.accessToken =
         "pk.eyJ1IjoicGFkZHl4bCIsImEiOiJjbDRyYWpmZTMwNGVvM2RvNnlxbmQwcW5tIn0.xmVqOFbAQjFVqrBCaneyIw";
       this.map = new mapboxgl.Map({
@@ -169,3 +171,14 @@ export default {
   },
 };
 </script>
+<style scoped>
+@import url("./bootstrap.min.css");
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  transition: all 0.3s;
+}
+</style>
