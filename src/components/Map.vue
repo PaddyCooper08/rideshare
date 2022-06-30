@@ -206,7 +206,7 @@ export default {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 69%;
+  width: 68%;
   transition: all 0.3s;
   z-index: -1;
 }

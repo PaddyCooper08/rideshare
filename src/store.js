@@ -12,4 +12,10 @@ export const store = reactive({
   eta: Number,
   distance: Number,
   isData: false,
+  firstName: String,
+  lastName: String,
+  email: String,
+  img: String,
+  age: Number,
+  show2: false,
 });
