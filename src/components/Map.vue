@@ -1,7 +1,16 @@
 <template>
-  <div class="col-md-8">
-    <div id="map"></div>
+  <div
+    v-if="store.isData"
+    id="ee"
+    class="bg-slate-200 rounded-md h-10 px-3 mt-4 text-center justify-center"
+  >
+    <h1 class="text-xl mt-1.5">
+      ETA: {{ this.fancyTimeFormat(store.eta) }} Distance:
+      {{ this.fancyKmFormat(store.distance) }}
+    </h1>
   </div>
+
+  <div id="map"></div>
 </template>
 <script>
 import { store } from "../store";
@@ -163,6 +172,27 @@ export default {
       }
       // add turn instructions here at the end
     },
+    fancyTimeFormat(duration) {
+      // Hours, minutes and seconds
+      var hrs = ~~(duration / 3600);
+      var mins = ~~((duration % 3600) / 60);
+      var secs = ~~duration % 60;
+
+      // Output like "1:01" or "4:03:59" or "123:03:59"
+      var ret = "";
+
+      if (hrs > 0) {
+        ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+      }
+
+      ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+      ret += "" + secs;
+      return ret;
+    },
+    fancyKmFormat(distance) {
+      var km = distance / 1000;
+      return km.toFixed(2) + " km";
+    },
   },
   mounted() {
     this.createMap();
@@ -172,13 +202,17 @@ export default {
 };
 </script>
 <style scoped>
-@import url("./bootstrap.min.css");
-
 #map {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 70%;
+  width: 69%;
   transition: all 0.3s;
+  z-index: -1;
+}
+#ee {
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 </style>
