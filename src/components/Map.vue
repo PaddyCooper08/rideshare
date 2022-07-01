@@ -2,7 +2,7 @@
   <div
     v-if="store.isData"
     id="ee"
-    class="bg-slate-200 rounded-md h-10 px-3 mt-4 text-center justify-center"
+    class="bg-slate-200 rounded-md px-3 h-10 mt-4 text-center justify-center"
   >
     <h1 class="text-xl mt-1.5">
       ETA: {{ this.fancyTimeFormat(store.eta) }} Distance:
@@ -208,11 +208,11 @@ export default {
   bottom: 0;
   width: 68%;
   transition: all 0.3s;
-  z-index: -1;
 }
 #ee {
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 2;
 }
 </style>
