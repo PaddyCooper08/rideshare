@@ -13,12 +13,12 @@
         {{ store.firstName }}, {{ store.lastName }}, {{ store.email }},
         {{ store.age }},
       </h1>
+      <img :src="store.img" alt="" />
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
 import { store } from "../store.js";
 import Map from "./Map.vue";
 // import mapboxgl from "mapbox-gl";
@@ -35,30 +35,16 @@ export default {
     Map,
   },
   methods: {
-    getFakeData() {
-      axios
-        .get("https://randomuser.me/api")
-        .then(function (response) {
-          console.log(response);
-          
-          store.firstName = response.data.results.first;
-          store.lastName = response.data.results.last;
-          store.email = response.data.results.email;
-          store.img = response.data.results.picture;
-          store.age = response.data.results.dob;
-          store.show2 = true;
-          console.log(store.firstName);
-          console.log(store.lastName);
-          console.log(store.email);
-          console.log(store.img);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log(error);
-        })
-        .then(function () {
-          // always executed
-        });
+    async getFakeData() {
+      const res = await fetch("https://randomuser.me/api");
+      const { results } = await res.json();
+      store.firstName = results[0].name.first;
+      store.lastName = results[0].name.last;
+      store.email = results[0].email;
+      store.age = results[0].dob.age;
+      store.img = results[0].picture.large;
+
+      store.show2 = true;
     },
   },
 };
