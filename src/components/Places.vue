@@ -5,7 +5,7 @@
         <div class="shadow overflow-hidden sm:rounded-md mt-[15]">
           <div class="px-4 py-3 bg-white sm:p-6">
             <div class="text-center">
-              <h1 class="text-4xl p-1 mb-2 text-[#5ce7c8]">Rideshare</h1>
+              <h1 class="text-4xl p-1 mb-2 text-[#ebc4f5]">Rideshare</h1>
             </div>
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-12 sm:col-span-6">
@@ -20,7 +20,7 @@
                   id="first-name"
                   autocomplete="given-name"
                   required
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  class="mt-1 outline-none block w-full shadow-sm sm:text-sm focus:outline-[#5ce7c8] border-gray-300 rounded-md"
                 />
               </div>
 
@@ -36,7 +36,7 @@
                   id="last-name"
                   required
                   autocomplete="family-name"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  class="mt-1 outline-none block w-full shadow-sm sm:text-sm focus:outline-[#5ce7c8] border-gray-300 rounded-md"
                 />
               </div>
               <div class="col-span-12 sm:col-span-6">
@@ -50,7 +50,7 @@
                   name="meet"
                   required
                   id="meet"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  class="mt-1 outline-none block w-full shadow-sm sm:text-sm focus:outline-[#5ce7c8] border-gray-300 rounded-md"
                 />
               </div>
 
@@ -66,7 +66,7 @@
                   name="car-reg"
                   required
                   id="car-reg"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  class="mt-1 block w-full shadow-sm sm:text-sm rounded-md outline-none focus:outline-[#5ce7c8]"
                 />
               </div>
             </div>
@@ -85,7 +85,11 @@
         </div>
       </form>
       <div class="mt-10 mx-auto text-center text-underline">
-        <img src="../assets/e2.svg" alt="" />
+        <img
+          src="../assets/e2.svg"
+          style="width: 400px; height: 100px"
+          alt=""
+        />
       </div>
     </div>
 
