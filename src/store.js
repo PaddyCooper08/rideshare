@@ -21,5 +21,7 @@ export const store = reactive({
   loccode: String,
   distSaved: Number,
   showDistSaved: false,
-  reg: String
+  reg: String,
+  gender: Boolean
+
 });

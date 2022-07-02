@@ -9,4 +9,7 @@
 * {
   font-family: "Ubuntu", sans-serif;
 }
+html {
+  overflow-y: hidden;
+}
 </style>
