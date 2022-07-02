@@ -10,7 +10,7 @@
     </h1>
   </div>
 
-  <div id="map"></div>
+  <div class="h-screen" id="map"></div>
 </template>
 <script>
 import { store } from "../store";
@@ -202,13 +202,13 @@ export default {
 };
 </script>
 <style scoped>
-#map {
+/* #map {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 68%;
   transition: all 0.3s;
-}
+} */
 #ee {
   position: absolute;
   top: 0;

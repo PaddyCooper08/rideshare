@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row g-0">
     <div class="col-md-8" v-if="store.show">
       <Map />
     </div>

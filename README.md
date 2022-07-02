@@ -1,29 +1,44 @@
 # rideshare
 
-This template should help get you started developing with Vue 3 in Vite.
+## About
 
-## Recommended IDE Setup
+This website allows the user to select a point on the map where they would like to go (like uber), with the first point being their latitude/longitude location (this is why it is sometimes inaccurate). It then shows the router and the distance + expected length of journey (again like uber). The user enters their details (the name is not actually saved) and their car reg. This is used to find out what car they have and gets the L/km fuel rate. This then calculates the fuel saved and the price of the fuel saved. It then grabs a fake person and a nearby address - this forms the profile of the person they are ridesharing with.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Tech Stack
 
-## Customize configuration
+### Frontend
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [Vue](http://vuejs.org)
+- [https://tailwindcss.com/](https://tailwindcss.com/) + [https://tailwindui.com/](https://tailwindui.com/)
+- [Bootstrap](https://getbootstrap.com/) (in places)
 
-## Project Setup
+### External resources
 
-```sh
-npm install
-```
+- APIs - accessed with [axios-http](https://axios-http.com/)
+    
+    [mapbox](http://mapbox.com)  (map + directions
+    
+    [abstract](https://www.abstractapi.com/) (geolocation)
+    
+    [randomuser.me](http://randomuser.me) (fake data)
+    
+    [ukvehicledata.co.uk](http://ukvehicledata.co.uk) (car/fuel lookup)
+    
+- Hosting
+    
+    Source code hosted at https://github.com/PaddyCooper08/rideshare
+    
+    built with [vite](http://vitejs.dev)
+    
+    Live demo hosted by [vercel](https://vercel.com/dashboard)
+    
 
-### Compile and Hot-Reload for Development
+## Credits:
 
-```sh
-npm run dev
-```
+Logo, various graphics and general site layout created by Aidan Grieve.
 
-### Compile and Minify for Production
+Code, deployment and all that pizazz by [Paddy Cooper](http://github.com/paddycooper08)
 
-```sh
-npm run build
-```
+Thanks to the guy on [stackoverflow](http://stackoverflow.com) who told me how to format time
+
+Thanks to all the people who created the documentation for all the above technologies.

@@ -18,4 +18,8 @@ export const store = reactive({
   img: String,
   age: Number,
   show2: false,
+  loccode: String,
+  distSaved: Number,
+  showDistSaved: false,
+  reg: String
 });
