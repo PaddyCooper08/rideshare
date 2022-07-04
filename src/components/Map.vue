@@ -4,7 +4,7 @@
     id="ee"
     class="bg-slate-200 rounded-md px-3 h-10 mt-4 text-center justify-center"
   >
-    <h1 class="text-xl mt-1.5">
+    <h1 class="text-xl mt-1.5 text-[#00345c]">
       ETA: {{ this.fancyTimeFormat(store.eta) }} Distance:
       {{ this.fancyKmFormat(store.distance) }}
     </h1>
