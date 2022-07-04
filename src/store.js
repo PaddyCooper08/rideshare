@@ -22,6 +22,6 @@ export const store = reactive({
   distSaved: Number,
   showDistSaved: false,
   reg: String,
-  gender: Boolean
-
+  gender: Boolean,
+  co2: String,
 });
