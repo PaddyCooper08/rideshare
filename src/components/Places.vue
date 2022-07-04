@@ -786,6 +786,7 @@
         </div>
       </div>
     </Transition>
+    <p @click="getCarDetails()">e</p>
   </div>
 </template>
 
@@ -813,6 +814,7 @@ export default {
       link: "",
       email: "",
       eemail: "",
+      c02: null,
     };
   },
   validations() {
@@ -896,6 +898,30 @@ export default {
       store.distSaved = distSaved.toString();
 
       store.showDistSaved = true;
+    },
+    getCarDetails() {
+      var data = JSON.stringify({
+        registrationNumber: store.reg,
+      });
+
+      var config = {
+        method: "post",
+        url: "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+        headers: {
+          "x-api-key": "REmv9sFZbE3Dc9tbvWlpraoGUNnaoYKi1ulj1gtI",
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
+      axios(config)
+        .then(function (response) {
+          console.log(JSON.stringify(response.data));
+          this.co2 = response.data.co2Emissions;
+          console.log(this.co2);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     },
   },
 };
