@@ -9,6 +9,7 @@
 * {
   font-family: "Ubuntu", sans-serif;
 }
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 html {
   overflow-y: hidden;
 }
