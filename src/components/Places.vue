@@ -1,6 +1,6 @@
 <template>
-  <div class="container h-screen p-0 mb-0 bg-white rounded-md">
-    <div v-if="!store.show2">
+  <div class="container h-screen p-0 m-0 mb-0 bg-white rounded-md">
+    <div v-if="this.showShit">
       <form action="#" @submit.prevent>
         <div
           class="shadow overflow-hidden sm:rounded-md mt-[15] text-[#00345c]"
@@ -44,7 +44,7 @@
                 <input
                   type="datetime-local"
                   name="meet"
-                  required
+                  
                   id="meet"
                   class="mt-1 outline-none block w-full shadow-sm sm:text-sm focus:outline-[#5ce7c8] border-gray-300 rounded-md"
                 />
@@ -78,12 +78,12 @@
           </div>
         </div>
       </form>
-      <div class="mt-10 mr-0 text-2xl text-center">
+      <div class="mt-[10rem] mr-0 text-2xl text-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           version="1.1"
-          width="400"
+          width="600"
           height="100"
           viewBox="0 0 642 149"
           xml:space="preserve"
@@ -407,11 +407,11 @@
             </g>
           </g>
         </svg>
-        <p class="mt-1">In Partnership With</p>
+        <p class="mt-[2rem]">In Partnership With</p>
         <svg
-          class="mx-auto"
-          width="300"
-          height="80"
+          class="mx-auto mt-[1.6rem]"
+          width="400"
+          height="100"
           viewBox="0 0 1505 255"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -511,9 +511,22 @@
       </div>
     </div>
     <Transition name="slide-fade">
+      <div>
+        <div v-if="this.showSpinner" class="justify-center mx-auto my-auto spinner align-center">
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+  <i></i>
+</div>
+        <!-- <svg v-if="this.showSpinner" class="justify-center my-auto animate-spin align-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill='#000000'><path d="M21 10V3l-2.7 2.7C16.6 4 14.3 3 11.8 3c-4.7.1-8.7 4-8.8 8.7-.1 5.1 3.9 9.3 9 9.3 3.3 0 6.2-1.8 7.8-4.5.4-.7-.1-1.5-.9-1.5-.4 0-.7.2-.9.5-1.3 2.1-3.6 3.6-6.3 3.5C8 18.9 5 15.8 5 12.1 4.9 8.2 8.1 5 12 5c1.9 0 3.7.8 4.9 2.1L14 10h7z"></path></g></svg> -->
+
       <div v-if="store.show2">
+        
         <div
-          class="container relative items-center p-4 mt-5 text-center bg-white rounded shadow"
+          class="container relative items-center w-full p-4 mt-5 text-center bg-white rounded shadow"
         >
           <div class="">
             <img
@@ -554,25 +567,27 @@
           >
             {{ this.eemail }}</a
           >
-          <button
-            type="button align-center"
-            class="py-3 text-sm font-medium leading-snug text-white uppercase transition duration-150 ease-in-out bg-[rgb(92,231,200)] rounded shadow-md w-50 px-7 hover:bg-green-500 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+          <div class="block mt-5"><button
+            type="button"
+            class="  py-3 w-50 text-sm align-center font-medium leading-snug text-white uppercase transition duration-150 ease-in-out bg-[rgb(92,231,200)] rounded shadow-md w-50 px-7 hover:bg-green-500 hover:shadow-lg  active:shadow-lg"
           >
             &#10004;&nbsp;&nbsp; Accept Sharing
           </button>
           <button
+          @click="denySharing"
             type="button align-center"
-            class="py-3 text-sm font-medium leading-snug text-white uppercase transition duration-150 ease-in-out bg-[#ebc4f5] rounded shadow-md w-50 px-7 hover:bg-red-500 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            class="   py-3 w-50 text-sm font-medium leading-snug text-white uppercase transition duration-150 ease-in-out bg-[#ebc4f5] rounded shadow-md w-50 px-7 hover:bg-red-500 hover:shadow-lg   active:shadow-lg"
           >
-            &#9587;&nbsp;&nbsp; Deny Sharing
-          </button>
+            &#10799;&nbsp;&nbsp; Deny Sharing
+          </button></div>
+          
         </div>
-        <div class="mt-10 mr-0 text-2xl text-center">
+        <div class="mt-[7rem] mr-0 text-2xl text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             version="1.1"
-            width="400"
+            width="600"
             height="100"
             viewBox="0 0 642 149"
             xml:space="preserve"
@@ -896,11 +911,11 @@
               </g>
             </g>
           </svg>
-          <p class="mt-1">In Partnership With</p>
+          <p class="mt-[2rem]">In Partnership With</p>
           <svg
-            class="mx-auto"
-            width="300"
-            height="80"
+            class="mx-auto mt-[0.2rem]"
+            width="400"
+            height="140"
             viewBox="0 0 1505 255"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -998,7 +1013,8 @@
             </defs>
           </svg>
         </div>
-      </div>
+      </div></div>
+              
     </Transition>
     <p @click="getCarDetails()">e</p>
   </div>
@@ -1019,6 +1035,7 @@ import Map from "./Map.vue";
 // import mapboxgl from "mapbox-gl";
 // import { GeolocateControl } from "mapbox-gl-controls";
 
+
 export default {
   data() {
     return {
@@ -1029,6 +1046,8 @@ export default {
       email: "",
       eemail: "",
       co2: "",
+      showSpinner: false,
+      showShit: true
     };
   },
   validations() {
@@ -1043,8 +1062,13 @@ export default {
   },
   components: {
     Map,
+
   },
   methods: {
+    denySharing() {
+      this.getFakeData()
+      
+    },
     submitForm() {
       this.v$.$validate();
       if (this.v$.$error) {
@@ -1096,11 +1120,21 @@ export default {
           .then(function () {
             // always executed
           });
-        store.show2 = true;
+          store.show2 = false
+          this.showSpinner = true
+          this.showShit = false
+          setTimeout(this.showusShitus
+            , 1000)
+        
         this.getDistSaved();
       } else {
         alert("Please your destination on the map.");
       }
+    },
+    showusShitus() {
+      this.showSpinner = false
+      store.show2 = true
+
     },
     getDistSaved() {
       let dist = store.distance;
@@ -1147,4 +1181,106 @@ export default {
   transform: translateX(20px);
   opacity: 0;
 }
+.spinner {
+  animation: rotate 0.8s infinite linear;
+  position: relative;
+  display: block;
+  width: 500px;
+  height: 500px;
+}
+.spinner i {
+  animation: rotate 3s infinite linear;
+  transform-origin: 50% 100% 0;
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  border: solid 12px transparent;
+  border-bottom: none;
+}
+.spinner i:nth-child(1) {
+  animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+  width: 44px;
+  height: 22px;
+  margin-top: -22px;
+  margin-left: -22px;
+  border-color: #2172b8;
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+}
+.spinner i:nth-child(2) {
+  animation-timing-function: cubic-bezier(0.09, 0.4, 0.14, 0.03);
+  width: 58px;
+  height: 29px;
+  margin-top: -29px;
+  margin-left: -29px;
+  border-color: #18a39b;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+}
+.spinner i:nth-child(3) {
+  animation-timing-function: cubic-bezier(0.09, 0.6, 0.16, 0.03);
+  width: 72px;
+  height: 36px;
+  margin-top: -36px;
+  margin-left: -36px;
+  border-color: #82c545;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+}
+.spinner i:nth-child(4) {
+  animation-timing-function: cubic-bezier(0.09, 0.8, 0.18, 0.03);
+  width: 86px;
+  height: 43px;
+  margin-top: -43px;
+  margin-left: -43px;
+  border-color: #f8b739;
+  border-top-left-radius: 54px;
+  border-top-right-radius: 54px;
+}
+.spinner i:nth-child(5) {
+  animation-timing-function: cubic-bezier(0.09, 1.0, 0.20, 0.03);
+  width: 100px;
+  height: 50px;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-color: #f06045;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+.spinner i:nth-child(6) {
+  animation-timing-function: cubic-bezier(0.09, 1.2, 0.22, 0.03);
+  width: 114px;
+  height: 57px;
+  margin-top: -57px;
+  margin-left: -57px;
+  border-color: #ed2861;
+  border-top-left-radius: 66px;
+  border-top-right-radius: 66px;
+}
+.spinner i:nth-child(7) {
+  animation-timing-function: cubic-bezier(0.09, 1.4, 0.24, 0.03);
+  width: 128px;
+  height: 64px;
+  margin-top: -64px;
+  margin-left: -64px;
+  border-color: #c12680;
+  border-top-left-radius: 72px;
+  border-top-right-radius: 72px;
+}
+.spinner i:nth-child(8) {
+  animation-timing-function: cubic-bezier(0.09, 1.6, 0.26, 0.03);
+  width: 142px;
+  height: 71px;
+  margin-top: -71px;
+  margin-left: -71px;
+  border-color: #5d3191;
+  border-top-left-radius: 78px;
+  border-top-right-radius: 78px;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
 </style>
