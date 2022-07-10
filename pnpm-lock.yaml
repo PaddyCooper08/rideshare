@@ -9,6 +9,7 @@ specifiers:
   mapbox-gl: ^2.9.1
   mapbox-gl-controls: ^2.3.5
   postcss: ^8.4.14
+  prettier: ^2.7.1
   tailwindcss: ^3.1.4
   vite: ^2.9.12
   vue: ^3.2.37
@@ -20,6 +21,7 @@ dependencies:
   axios: 0.27.2
   mapbox-gl: 2.9.1
   mapbox-gl-controls: 2.3.5_mapbox-gl@2.9.1
+  prettier: 2.7.1
   vue: 3.2.37
   vue-router: 4.0.16_vue@3.2.37
 
@@ -953,6 +955,12 @@ packages:
 
   /potpack/1.0.2:
     resolution: {integrity: sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==}
+    dev: false
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: false
 
   /protocol-buffers-schema/3.6.0:

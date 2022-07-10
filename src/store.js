@@ -24,4 +24,5 @@ export const store = reactive({
   reg: String,
   gender: Boolean,
   co2: String,
+  renderMapps: false
 });

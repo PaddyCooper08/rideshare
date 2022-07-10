@@ -1,8 +1,8 @@
 <template>
   <div
-    v-if="store.isData"
+    v-show="store.isData"
     id="ee"
-    class="bg-slate-200 rounded-md px-3 h-10 mt-4 text-center justify-center"
+    class="justify-center h-10 px-3 mt-4 text-center rounded-md bg-slate-200"
   >
     <h1 class="text-xl mt-1.5 text-[#00345c]">
       ETA: {{ this.fancyTimeFormat(store.eta) }} Distance:
@@ -10,11 +10,15 @@
     </h1>
   </div>
 
-  <div class="h-screen" id="map"></div>
+  <div v-show="this.showMap" class="w-full h-screen" id="map"></div>
 </template>
 <script>
 import { store } from "../store";
 export default {
+  props: {
+    showMap: Boolean,
+  },
+
   data() {
     return {
       store,

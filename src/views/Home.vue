@@ -1,10 +1,12 @@
 <template>
   <div class="row g-0">
-    <div class="col-md-8" v-if="store.show">
-      <Map />
+    <div class="col-md-8" v-show="store.show">
+      <!-- <Map /> -->
+      <SkeletonMap />
     </div>
     <div class="col-md-4">
-      <Places />
+      <!-- <Places /> -->
+      <SkeletonPlaces />
     </div>
   </div>
 </template>
@@ -12,6 +14,8 @@
 <script>
 import Map from "../components/Map.vue";
 import Places from "../components/Places.vue";
+import SkeletonPlaces from "../components/SkeletonPlaces.vue";
+import SkeletonMap from "../components/SkeletonMap.vue";
 import { store } from "../store.js";
 import axios from "axios";
 
@@ -19,6 +23,8 @@ export default {
   components: {
     Map,
     Places,
+    SkeletonPlaces,
+    SkeletonMap,
   },
   data() {
     return {
