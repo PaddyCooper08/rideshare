@@ -23,6 +23,6 @@ export const store = reactive({
   showDistSaved: false,
   reg: String,
   gender: Boolean,
-  co2: String,
+  carbon: String,
   renderMapps: false
 });

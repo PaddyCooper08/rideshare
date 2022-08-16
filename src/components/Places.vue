@@ -629,12 +629,6 @@
               >
                 {{ this.eemail }}</a
               >
-              <star-rating
-                :rating="3.8"
-                :read-only="true"
-                :increment="0.01"
-                v-model:rating="rating"
-              ></star-rating>
 
               <div class="block mt-5">
                 <button
@@ -1125,8 +1119,8 @@
         </div>
       </Transition>
     </div>
-    <div v-show="this.showFinal">
-      <Star />
+    <div v-if="this.showFinal">
+      <Final :reg="this.reg" />
     </div>
   </div>
 </template>
@@ -1135,7 +1129,7 @@
 import { store } from "../store.js";
 import axios from "axios";
 import useValidate from "@vuelidate/core";
-import Star from "./Star.vue";
+import Final from "./Final.vue";
 
 import {
   required,
@@ -1176,7 +1170,7 @@ export default {
   },
   components: {
     Map,
-    Star,
+    Final,
   },
   methods: {
     denySharing() {
@@ -1257,22 +1251,6 @@ export default {
       store.distSaved = distSaved.toString();
 
       store.showDistSaved = true;
-    },
-    getCarDetails() {
-      let regg = store.reg;
-      var config = {
-        method: "get",
-        url: `https://dvlasearch.appspot.com/DvlaSearch?apikey=gkDQAhi5totJUHrg&licencePlate=${regg}`,
-        headers: {},
-      };
-
-      axios(config)
-        .then(function (response) {
-          store.co2 = response.data.co2Emissions;
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
     },
   },
 };

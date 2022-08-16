@@ -1,44 +1,56 @@
 <template>
-  <i
-    id="1"
-    :class="[
-      this.checked1 ? 'bi-star-fill text-yellow-300' : 'bi-star text-gray-400',
-    ]"
-    class="bi"
-    @click="this.switch(1)"
-  ></i>
-  <i
-    id="2"
-    :class="[
-      this.checked2 ? 'bi-star-fill text-yellow-300' : 'bi-star text-gray-400',
-    ]"
-    class="bi"
-    @click="this.switch(2)"
-  ></i>
-  <i
-    id="3"
-    :class="[
-      this.checked3 ? 'bi-star-fill text-yellow-300' : 'bi-star text-gray-400',
-    ]"
-    class="bi"
-    @click="this.switch(3)"
-  ></i>
-  <i
-    id="4"
-    :class="[
-      this.checked4 ? 'bi-star-fill text-yellow-300' : 'bi-star text-gray-400',
-    ]"
-    class="bi"
-    @click="this.switch(4)"
-  ></i>
-  <i
-    id="5"
-    :class="[
-      this.checked5 ? 'bi-star-fill text-yellow-300' : 'bi-star text-gray-400',
-    ]"
-    class="bi"
-    @click="this.switch(5)"
-  ></i>
+  <div class="items-center justify-center">
+    <i
+      id="1"
+      :class="[
+        this.checked1
+          ? 'bi-star-fill text-yellow-300'
+          : 'bi-star text-gray-400',
+      ]"
+      class="text-6xl bi"
+      @click="this.switch(1)"
+    ></i>
+    <i
+      id="2"
+      :class="[
+        this.checked2
+          ? 'bi-star-fill text-yellow-300'
+          : 'bi-star text-gray-400',
+      ]"
+      class="text-6xl bi"
+      @click="this.switch(2)"
+    ></i>
+    <i
+      id="3"
+      :class="[
+        this.checked3
+          ? 'bi-star-fill text-yellow-300'
+          : 'bi-star text-gray-400',
+      ]"
+      class="text-6xl bi"
+      @click="this.switch(3)"
+    ></i>
+    <i
+      id="4"
+      :class="[
+        this.checked4
+          ? 'bi-star-fill text-yellow-300'
+          : 'bi-star text-gray-400',
+      ]"
+      class="text-6xl bi"
+      @click="this.switch(4)"
+    ></i>
+    <i
+      id="5"
+      :class="[
+        this.checked5
+          ? 'bi-star-fill text-yellow-300'
+          : 'bi-star text-gray-400',
+      ]"
+      class="text-6xl bi"
+      @click="this.switch(5)"
+    ></i>
+  </div>
 </template>
 
 <script>
