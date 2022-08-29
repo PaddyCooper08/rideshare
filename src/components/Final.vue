@@ -89,8 +89,19 @@ export default {
 
     axios(config)
       .then(function (response) {
-        store.carbon = response.data.co2Emissions;
-        console.log(store.carbon);
+        console.log(typeof response.data.error);
+        if (response.data.error === 0) {
+          alert(
+            "Car reg invalid, please re-enter data, page will reload when you close this dialog "
+          );
+          window.location.reload(true);
+        } else {
+          store.carbon = response.data.c02Emissions;
+        }
+
+        // console.log(response.data.error);
+
+        // console.log(store.carbon);
 
         // console.log(this.carbon);
       })
