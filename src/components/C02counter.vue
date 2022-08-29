@@ -1,5 +1,13 @@
 <template>
-  <h1>{{ this.c02 }}</h1>
+  <h1 class="text-xl">
+    You've stopped {{ this.emSaved }} grams of harmful carbon dioxide being let
+    into the atmosphere
+  </h1>
+  <h1 class="text-xl">
+    You've allowed {{ this.treeDays }} trees to have a day off from extracting
+    carbon dioxide for the atmosphere.
+    <span class="text-2xl">{{ this.Emojis }}</span>
+  </h1>
 </template>
 
 <script>
@@ -9,6 +17,8 @@ export default {
     return {
       store,
       emSaved: Number,
+      treeDays: Number,
+      Emojis: "",
     };
   },
   props: ["c02"],
@@ -21,8 +31,21 @@ export default {
     console.log(dist);
     let emissionsSaved = Math.round(carbon * dist);
     this.emSaved = emissionsSaved;
+    let tree = 58;
+    let rawTree = emissionsSaved / tree;
+    this.treeDays = Math.ceil(rawTree);
+
+    console.log(this.treeDays);
+
+    // console.log(emojis);
 
     console.log(emissionsSaved);
+
+    const loopTime = this.treeDays;
+
+    for (let i = 0; i < loopTime; i++) {
+      this.Emojis += "🌲";
+    }
   },
 };
 </script>

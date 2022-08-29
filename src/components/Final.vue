@@ -30,6 +30,14 @@
     "
   >
     <h1 class="p-1 mb-6 text-6xl">You're all set!</h1>
+    <h2>
+      You're ride sharing with
+      <span class="text-rose-700">{{ this.name }}</span>
+    </h2>
+    <h2>
+      If anything changes contact them at
+      <a :href="this.emailLink" class="text-rose-700">{{ this.email }}</a>
+    </h2>
     <Star /> <C02Counter :c02="store.carbon" />
   </div>
 </template>
@@ -48,7 +56,7 @@ export default {
       showRest: false,
     };
   },
-  props: ["reg"],
+  props: ["reg", "name", "email", "emailLink"],
   components: {
     C02Counter,
     Star,

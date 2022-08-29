@@ -12,8 +12,7 @@ export const store = reactive({
   eta: Number,
   distance: Number,
   isData: false,
-  firstName: String,
-  lastName: String,
+ 
   email: String,
   img: String,
   age: Number,
@@ -24,5 +23,6 @@ export const store = reactive({
   reg: String,
   gender: Boolean,
   carbon: String,
-  renderMapps: false
+  renderMapps: false,
+  contactEmail: String
 });
