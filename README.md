@@ -1,4 +1,12 @@
-# rideshare
+# readme.md
+
+# urls for the live demo
+
+[https://rideshare-finder.vercel.app/](https://rideshare-finder.vercel.app/)
+
+[https://rideshare-1as1.onrender.com](https://rideshare-1as1.onrender.com/)
+
+[https://rideshare-finder.netlify.app/](https://rideshare-finder.netlify.app/)
 
 ## About
 
@@ -11,12 +19,13 @@ This website allows the user to select a point on the map where they would like 
 - [Vue](http://vuejs.org)
 - [https://tailwindcss.com/](https://tailwindcss.com/) + [https://tailwindui.com/](https://tailwindui.com/)
 - [Bootstrap](https://getbootstrap.com/) (in places)
+- [js-confetti](https://www.npmjs.com/package/js-confetti)
 
 ### External resources
 
 - APIs - accessed with [axios-http](https://axios-http.com/)
     
-    [mapbox](http://mapbox.com)  (map + directions
+    [mapbox](http://mapbox.com)  (map + directions)
     
     [abstract](https://www.abstractapi.com/) (geolocation)
     
@@ -30,7 +39,7 @@ This website allows the user to select a point on the map where they would like 
     
     built with [vite](http://vitejs.dev)
     
-    Live demo hosted by [vercel](https://vercel.com/dashboard)
+    Live demo hosted by [vercel](https://vercel.com/dashboard), [render](https://render.com/) and [netlify](https://www.netlify.com/)
     
 
 ## Credits:
@@ -39,6 +48,6 @@ Logo, various graphics and general site layout created by Aidan Grieve.
 
 Code, deployment and all that pizazz by [Paddy Cooper](http://github.com/paddycooper08)
 
-Thanks to the guy on [stackoverflow](http://stackoverflow.com) who told me how to format time
+Various people on [stackoverflow](http://stackoverflow.com) who told me how to do silly javascript things
 
 Thanks to all the people who created the documentation for all the above technologies.
