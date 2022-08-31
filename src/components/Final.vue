@@ -80,54 +80,27 @@ export default {
 
   async mounted() {
     setTimeout(this.showS, 4000);
-    // let regg = this.reg;
-    // var config = {
-    //   method: "get",
-    //   url: `https://dvlasearch.appspot.com/DvlaSearch?apikey=gkDQAhi5totJUHrg&licencePlate=${regg}`,
-    //   headers: {},
-    // };
 
-    // axios(config)
-    //   .then(function (response) {
-    //     console.log(typeof response.data.error);
-    //     if (response.data.error === 0) {
-    //       alert(
-    //         "Car reg invalid, please re-enter data, page will reload when you close this dialog "
-    //       );
-    //       window.location.reload(true);
-    //     } else {
-    //       console.log("success");
-    //       store.carbon = response.data.c02Emissions;
-    //     }
-
-    //     // console.log(response.data.error);
-
-    //     // console.log(store.carbon);
-
-    //     // console.log(this.carbon);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
-
-    var data = JSON.stringify({ registrationNumber: "AA19AAA" });
-
-    var config = {
-      method: "post",
-      url: "https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+    const options = {
+      method: "POST",
+      url: "https://cors-anywhere.herokuapp.com/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
       headers: {
+        "content-type": "application/json",
         "x-api-key": "REmv9sFZbE3Dc9tbvWlpraoGUNnaoYKi1ulj1gtI",
-        "Content-Type": "application/json",
       },
-      data: data,
+      data: { registrationNumber: this.reg },
     };
 
-    axios(config)
+    axios
+      .request(options)
       .then(function (response) {
-        console.log(JSON.stringify(response.data));
+        store.carbon = response.data.co2Emissions;
       })
       .catch(function (error) {
-        console.log(error);
+        alert(
+          "Car reg invalid, please re-enter data, page will reload when you close this dialog "
+        );
+        window.location.reload(true);
       });
   },
 };
