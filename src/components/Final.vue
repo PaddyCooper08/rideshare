@@ -30,7 +30,15 @@
     "
   >
     <h1 class="p-1 mb-6 text-6xl">You're all set!</h1>
-    <h2>
+    <div class="">
+      <img
+        :src="store.img"
+        alt=""
+        class="w-32 mx-auto rounded-full shadow-lg"
+      />
+    </div>
+
+    <h2 class="inline-block">
       You're ride sharing with
       <span class="text-rose-700">{{ this.name }}</span>
     </h2>
@@ -83,7 +91,7 @@ export default {
 
     const options = {
       method: "POST",
-      url: "https://cors-anywhere.herokuapp.com/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+      url: "https://infinite-eyrie-32849.herokuapp.com/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
       headers: {
         "content-type": "application/json",
         "x-api-key": "REmv9sFZbE3Dc9tbvWlpraoGUNnaoYKi1ulj1gtI",
