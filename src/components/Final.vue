@@ -93,7 +93,7 @@
     </h2>
     <i class="text-6xl bi bi-envelope-fill"></i>
     <h2 class="mb-2 text-3xl">
-      You can contact them at
+      You can contact them to discuss timings at
       <a :href="this.emailLink" class="text-[#ebc4f5]">{{ this.email }}</a>
     </h2>
     <svg
@@ -310,6 +310,17 @@ export default {
         confettiNumber: 74,
       });
     },
+    sendEmail() {
+      Email.send({
+        Host: "smtp-mail.outlook.com",
+        Username: "confirmation.rideshare@outlook.com",
+        Password: "2vf63e7B5r89Tw",
+        To: "onslowpaddy@duck.com",
+        From: "confirmation.rideshare@outlook.com",
+        Subject: "This is the subject",
+        Body: "And this is the body",
+      }).then((message) => alert(message));
+    },
   },
 
   async mounted() {
@@ -336,6 +347,7 @@ export default {
         );
         window.location.reload(true);
       });
+    this.sendEmail();
   },
 };
 </script>

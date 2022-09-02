@@ -10,5 +10,6 @@ const app = createApp(App)
 app.use(router)
 
 
+
 // app.component('star-rating', VueStarRating.default)
 app.mount('#app')

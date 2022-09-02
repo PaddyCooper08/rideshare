@@ -79,24 +79,7 @@
                     "
                   />
                   <input
-                    class="
-                      float-left
-                      w-4
-                      h-4
-                      mt-1
-                      mr-2
-                      align-top
-                      transition
-                      duration-200
-                      bg-white bg-center bg-no-repeat bg-contain
-                      border border-gray-300
-                      rounded-sm
-                      appearance-none
-                      cursor-pointer
-                      form-check-input
-                      checked:bg-blue-600 checked:border-blue-600
-                      focus:outline-none
-                    "
+                    class="float-left w-4 h-4 mt-1 mr-2 align-top transition duration-200 bg-white bg-center bg-no-repeat bg-contain border border-gray-300 rounded-sm appearance-none cursor-pointer  form-check-input checked:bg-blue-600 checked:border-blue-600 focus:outline-none"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
@@ -138,15 +121,7 @@
               </div>
             </div>
             <div
-              class="
-                justify-center
-                px-4
-                py-4
-                text-center
-                bg-white
-                sm:px-6
-                align-center
-              "
+              class="justify-center px-4 py-4 text-center bg-white  sm:px-6 align-center"
             >
               <button
                 type="submit"
@@ -351,18 +326,7 @@
 
           <div v-if="store.show2">
             <div
-              class="
-                container
-                relative
-                items-center
-                w-full
-                p-4
-                mt-5
-                text-center
-                bg-white
-                rounded
-                shadow
-              "
+              class="container relative items-center w-full p-4 mt-5 text-center bg-white rounded shadow "
             >
               <div class="">
                 <img
@@ -394,10 +358,10 @@
                 v-if="store.gender"
                 class="text-lg text-[#ebc4f5] font-semibold my-3"
               >
-                Contact him at
+                Contact him to discuss times at
               </h4>
               <h4 v-else class="text-lg text-[#ebc4f5] font-semibold my-3">
-                Contact her at
+                Contact her to discuss times at at
               </h4>
               <a
                 class="text-xl text-[rgb(92,231,200)] font-bold my-3"
@@ -757,7 +721,7 @@ export default {
 
         this.getDistSaved();
       } else {
-        alert("Please your destination on the map.");
+        alert("Please click your destination on the map.");
       }
     },
     showusShitus() {
