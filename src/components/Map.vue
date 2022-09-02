@@ -5,7 +5,7 @@
     class="justify-center h-10 px-3 mt-4 text-center rounded-md bg-slate-200"
   >
     <h1 class="text-xl mt-1.5 text-[#00345c]">
-      ETA: {{ this.fancyTimeFormat(store.eta) }} Distance:
+      Journey Time: {{ this.fancyTimeFormat(store.eta) }} Distance:
       {{ this.fancyKmFormat(store.distance) }}
     </h1>
   </div>
