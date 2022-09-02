@@ -20,8 +20,8 @@ In terms of how I tackled this problem; I took it step by step, building the app
 ## Tech Stack
 
 ### All imports/ npm dependencies
-!(image)[https://i.imgur.com/cJvzPdT.png]
-!(image)[https://i.imgur.com/cJvzPdT.png]
+![image)](https://i.imgur.com/cJvzPdT.png)
+![image](https://i.imgur.com/cJvzPdT.png)
 
 
 
