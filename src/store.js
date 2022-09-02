@@ -25,5 +25,6 @@ export const store = reactive({
   carbon: String,
   renderMapps: false,
   contactEmail: String,
-  simg: String
+  simg: String,
+  contactName: String
 });

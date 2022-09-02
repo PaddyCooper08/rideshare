@@ -79,7 +79,7 @@
                     "
                   />
                   <input
-                    class="float-left w-4 h-4 mt-1 mr-2 align-top transition duration-200 bg-white bg-center bg-no-repeat bg-contain border border-gray-300 rounded-sm appearance-none cursor-pointer  form-check-input checked:bg-blue-600 checked:border-blue-600 focus:outline-none"
+                    class="float-left w-4 h-4 mt-1 mr-2 align-top transition duration-200 bg-white bg-center bg-no-repeat bg-contain border border-gray-300 rounded-sm appearance-none cursor-pointer form-check-input checked:bg-blue-600 checked:border-blue-600 focus:outline-none"
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
@@ -88,7 +88,7 @@
                     class="inline-block text-gray-800 form-check-label"
                     for="flexCheckDefault"
                   >
-                    I do not want to receive communications from rideshare
+                    I do not want to receive marketing communications from rideshare
                   </label>
                 </div>
 
@@ -121,7 +121,7 @@
               </div>
             </div>
             <div
-              class="justify-center px-4 py-4 text-center bg-white  sm:px-6 align-center"
+              class="justify-center px-4 py-4 text-center bg-white sm:px-6 align-center"
             >
               <button
                 type="submit"
@@ -718,6 +718,8 @@ export default {
         this.showSpinner = true;
         this.showShit = false;
         setTimeout(this.showusShitus, 1000);
+        store.contactEmail = this.uEmail;
+        store.contactName = this.uFirstName;
 
         this.getDistSaved();
       } else {

@@ -311,15 +311,11 @@ export default {
       });
     },
     sendEmail() {
-      Email.send({
-        Host: "smtp-mail.outlook.com",
-        Username: "confirmation.rideshare@outlook.com",
-        Password: "2vf63e7B5r89Tw",
-        To: "onslowpaddy@duck.com",
-        From: "confirmation.rideshare@outlook.com",
-        Subject: "This is the subject",
-        Body: "And this is the body",
-      }).then((message) => alert(message));
+      emailjs.send("service_fv4b1x8", "template_8ri4opo", {
+        to_name: store.contactName,
+        contact_email: store.contactEmail,
+        rideshare_companion: this.name,
+      });
     },
   },
 
