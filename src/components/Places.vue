@@ -79,7 +79,24 @@
                     "
                   />
                   <input
-                    class="float-left w-4 h-4 mt-1 mr-2 align-top transition duration-200 bg-white bg-center bg-no-repeat bg-contain border border-gray-300 rounded-sm appearance-none cursor-pointer  form-check-input checked:bg-blue-600 checked:border-blue-600 focus:outline-none"
+                    class="
+                      float-left
+                      w-4
+                      h-4
+                      mt-1
+                      mr-2
+                      align-top
+                      transition
+                      duration-200
+                      bg-white bg-center bg-no-repeat bg-contain
+                      border border-gray-300
+                      rounded-sm
+                      appearance-none
+                      cursor-pointer
+                      form-check-input
+                      checked:bg-blue-600 checked:border-blue-600
+                      focus:outline-none
+                    "
                     type="checkbox"
                     value=""
                     id="flexCheckDefault"
@@ -121,7 +138,15 @@
               </div>
             </div>
             <div
-              class="justify-center px-4 py-4 text-center bg-white  sm:px-6 align-center"
+              class="
+                justify-center
+                px-4
+                py-4
+                text-center
+                bg-white
+                sm:px-6
+                align-center
+              "
             >
               <button
                 type="submit"
@@ -326,7 +351,18 @@
 
           <div v-if="store.show2">
             <div
-              class="container relative items-center w-full p-4 mt-5 text-center bg-white rounded shadow "
+              class="
+                container
+                relative
+                items-center
+                w-full
+                p-4
+                mt-5
+                text-center
+                bg-white
+                rounded
+                shadow
+              "
             >
               <div class="">
                 <img
@@ -680,6 +716,7 @@ export default {
         store.email = results[0].email;
         store.age = results[0].dob.age;
         store.img = results[0].picture.large;
+        store.simg = results[0].picture.thumbnail;
         let gen = results[0].gender;
         let fname = this.firstName.toLowerCase();
         let lname = this.lastName.toLowerCase();
@@ -689,7 +726,6 @@ export default {
 
         this.eemail = `${fname}.${lname}@gmail.com`;
         this.email = `mailto: ${this.eemail}`;
-        console.log(this.email);
 
         if (gen === "male") {
           store.gender = true;
@@ -710,7 +746,6 @@ export default {
           })
           .catch(function (error) {
             // handle error
-            console.log(error);
           })
           .then(function () {
             // always executed

@@ -113,8 +113,8 @@ export default {
       // ("this.unchecked" + number) = !("this.unchecked" + number)
       // "this.checked" + number;
       // unbase = !unbase;
-      // console.log(unbase);
-      // console.log(this.unchecked1);
+      //
+      //
     },
   },
 };

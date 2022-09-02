@@ -135,7 +135,7 @@ export default {
         { method: "GET" }
       );
       const json = await query.json();
-      console.log(json);
+
       const data = json.routes[0];
       store.eta = data.duration;
       store.distance = data.distance;
