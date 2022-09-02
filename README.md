@@ -9,8 +9,13 @@
 [https://rideshare-finder.netlify.app/](https://rideshare-finder.netlify.app/)
 
 ## About
+### A4 description doc for competition
+                   
+I’ve never been very good at algorithims and stuff so I took a different approach. I created an uber-style app where the user submits their name etc as well as their car reg. They then can find a location on the interactive map and click it. This calculates the distance and the time the journey would take – much like google maps. They then are presented with a fake person from an api (all things used and a more techy description of everything can be found in the readme.md on my github). They can then accept this person or reroll it. The app takes the users current location and finds a nearby postcode to be the address of the fake person so it’s believable. It also provided them with a fake email. At this point a confirmation email is sent to the contact email provided at the beginning. A request to the gov.uk VES lookup api is also sent to find the co2 emissions (g/km) of their car. This is passed through a proxy I host to avoid CORS errors. If the reg code is invalid, at this point the user is notified and sent back to the first page (all other error handling is done at the point the error occurs). This data is used to calculate how much co2 is saved by ridesharing and how many “tree days” this equates to. This is how many trees get a “day off” of removing carbon from the air because of this journey save – a tree removes ~58g of carbon per day. This is displayed in a graphical form. There is also a star rating system (this doesn’t actually do anything – it’s visual only). All frameworks, code snippets and packages are all accredited in the readme on my github. All code and tech stuff handled by Paddy Cooper, design and svg/graphic drawings by Aidan Grieve – both 3E.
 
-This website allows the user to select a point on the map where they would like to go (like uber), with the first point being their latitude/longitude location (this is why it is sometimes inaccurate). It then shows the router and the distance + expected length of journey (again like uber). The user enters their details (the name is not actually saved) and their car reg. This is used to find out what car they have and gets the L/km fuel rate. This then calculates the fuel saved and the price of the fuel saved. It then grabs a fake person and a nearby address - this forms the profile of the person they are ridesharing with.
+In terms of how I tackled this problem; I took it step by step, building the app up around the map. I used all the Vue (my javascript framework) magic available to me and outsourced as much of the work – emails, co2 calculations, geolocation, mapwork and proxy code to various apis/open source projects.
+
+
 
 ## Tech Stack
 
