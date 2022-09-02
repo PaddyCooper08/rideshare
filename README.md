@@ -20,8 +20,8 @@ In terms of how I tackled this problem; I took it step by step, building the app
 ## Tech Stack
 
 ### All imports/ npm dependencies
-
-![code.png](readme%20md%205234e9cbe5ce43989723f40492f0c7ce/code.png)
+https://i.imgur.com/cJvzPdT.png
+https://i.imgur.com/cJvzPdT.png
 
 ![code.png](readme%20md%205234e9cbe5ce43989723f40492f0c7ce/code%201.png)
 
