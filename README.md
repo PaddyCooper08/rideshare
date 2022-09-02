@@ -35,17 +35,17 @@ In terms of how I tackled this problem; I took it step by step, building the app
 
 ### External resources
 
-- APIs - accessed with [axios-http](https://axios-http.com/)
-  [mapbox](http://mapbox.com) (map + directions)
-  [abstract](https://www.abstractapi.com/) (geolocation)
-  [randomuser.me](http://randomuser.me) (fake data)
-  [gov.uk VES lookup](https://developer-portal.driver-vehicle-licensing.api.gov.uk/apis/vehicle-enquiry-service/vehicle-enquiry-service-description.html#vehicle-enquiry-service-api) (car/fuel lookup)
+##  APIs - accessed with [axios-http](https://axios-http.com/)
+  - [mapbox](http://mapbox.com) (map + directions)
+  - [abstract](https://www.abstractapi.com/) (geolocation)
+  - [randomuser.me](http://randomuser.me) (fake data)
+  - [gov.uk VES lookup](https://developer-portal.driver-vehicle-licensing.api.gov.uk/apis/vehicle-enquiry-service/vehicle-enquiry-service-description.html#vehicle-enquiry-service-api) (car/fuel lookup)
   [https://www.emailjs.com/](https://www.emailjs.com/) (for sending the confirmation emails)
-- Hosting
-  Source code hosted at https://github.com/PaddyCooper08/rideshare
-  built with [vite](http://vitejs.dev)
-  Live demo hosted by [vercel](https://vercel.com/dashboard), [render](https://render.com/) and [netlify](https://www.netlify.com/)
-  My [cors-anywhere](https://github.com/Rob--W/cors-anywhere) proxy hosted by [heroku](https://www.heroku.com)
+## Hosting
+  - Source code hosted at https://github.com/PaddyCooper08/rideshare
+  - built with [vite](http://vitejs.dev)
+  - Live demo hosted by [vercel](https://vercel.com/dashboard), [render](https://render.com/) and [netlify](https://www.netlify.com/)
+  - My [cors-anywhere](https://github.com/Rob--W/cors-anywhere) proxy hosted by [heroku](https://www.heroku.com)
 
 ## Credits:
 
