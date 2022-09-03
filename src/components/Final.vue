@@ -327,7 +327,7 @@ export default {
       url: "https://infinite-eyrie-32849.herokuapp.com/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
       headers: {
         "content-type": "application/json",
-        "x-api-key": "REmv9sFZbE3Dc9tbvWlpraoGUNnaoYKi1ulj1gtI",
+        "x-api-key": import.meta.env.VITE_VES,
       },
       data: { registrationNumber: this.reg },
     };

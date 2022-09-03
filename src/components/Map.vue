@@ -26,8 +26,7 @@ export default {
   },
   methods: {
     createMap() {
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoicGFkZHl4bCIsImEiOiJjbDRyYWpmZTMwNGVvM2RvNnlxbmQwcW5tIn0.xmVqOFbAQjFVqrBCaneyIw";
+      mapboxgl.accessToken = import.meta.env.VITE_MAPBOX;
       this.map = new mapboxgl.Map({
         container: "map", // container ID
         style: "mapbox://styles/mapbox/streets-v11", // style URL
