@@ -311,11 +311,24 @@ export default {
       });
     },
     sendEmail() {
-      emailjs.send("service_fv4b1x8", "template_8ri4opo", {
-        to_name: store.contactName,
-        contact_email: store.contactEmail,
-        rideshare_companion: this.name,
-      });
+      const options = {
+        method: "POST",
+        url: "https://infinite-eyrie-32849.herokuapp.com/https://rideshare-email-server.herokuapp.com/sendEmail",
+        headers: { "content-type": "application/json" },
+        data: {
+          from: "confirmation@rideshare.xyz",
+          to: store.contactEmail,
+          subject: `Rideshare confirmation with ${this.name}`,
+          message: `${store.contactName}, this is an automated email to confirm your rideshare with ${this.name}. Email them to figure out details at ${this.email}`,
+        },
+      };
+
+      axios
+        .request(options)
+        .then(function (response) {})
+        .catch(function (error) {
+          console.error(error);
+        });
     },
   },
 
