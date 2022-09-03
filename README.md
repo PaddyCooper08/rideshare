@@ -1,12 +1,6 @@
 # readme.md
 
-# urls for the live demo
-
-[https://rideshare-finder.vercel.app/](https://rideshare-finder.vercel.app/)
-
-[https://rideshare-1as1.onrender.com](https://rideshare-1as1.onrender.com/)
-
-[https://rideshare-finder.netlify.app/](https://rideshare-finder.netlify.app/)
+## [Live demo](https://rideshare-finder.vercel.app/)
 
 ## About
 #### Other components:
