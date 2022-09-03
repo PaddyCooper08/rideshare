@@ -6,6 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.env.*
+oldenv.txt
 .env
 
 node_modules
@@ -27,3 +29,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+.vercel
