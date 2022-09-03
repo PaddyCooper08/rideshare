@@ -11,6 +11,7 @@
 ## About
 #### Other components:
 [cors-anywhere proxy](https://infinite-eyrie-32849.herokuapp.com), code is [here](https://github.com/Rob--W/cors-anywhere)
+[my expressjs email server](https://github.com/PaddyCooper08/emailServer)
 
 ### A4 description doc for competition
                    
