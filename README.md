@@ -45,6 +45,7 @@ In terms of how I tackled this problem; I took it step by step, building the app
   - built with [vite](http://vitejs.dev)
   - Live demo hosted by [vercel](https://vercel.com/dashboard)
   - My [cors-anywhere](https://github.com/Rob--W/cors-anywhere) proxy hosted by [heroku](https://www.heroku.com)
+  - My custom nodejs email server hosted by [heroku](https://www.heroku.com)
 
 ## Credits:
 
