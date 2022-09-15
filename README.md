@@ -43,7 +43,7 @@ In terms of how I tackled this problem; I took it step by step, building the app
 ## Hosting
   - Source code hosted at https://github.com/PaddyCooper08/rideshare
   - built with [vite](http://vitejs.dev)
-  - Live demo hosted by [vercel](https://vercel.com/dashboard), [render](https://render.com/) and [netlify](https://www.netlify.com/)
+  - Live demo hosted by [vercel](https://vercel.com/dashboard)
   - My [cors-anywhere](https://github.com/Rob--W/cors-anywhere) proxy hosted by [heroku](https://www.heroku.com)
 
 ## Credits:
