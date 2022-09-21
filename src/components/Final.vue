@@ -337,7 +337,7 @@ export default {
 
     const options = {
       method: "POST",
-      url: "hhttps://black-star-4232.fly.dev/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+      url: "https://black-star-4232.fly.dev/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
       headers: {
         "content-type": "application/json",
         "x-api-key": import.meta.env.VITE_VES,
