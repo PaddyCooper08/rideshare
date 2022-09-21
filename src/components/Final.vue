@@ -313,7 +313,7 @@ export default {
     sendEmail() {
       const options = {
         method: "POST",
-        url: "https://infinite-eyrie-32849.herokuapp.com/https://rideshare-email-server.herokuapp.com/sendEmail",
+        url: "https://black-star-4232.fly.dev/https://broken-sun-1539.fly.dev/sendEmail",
         headers: { "content-type": "application/json" },
         data: {
           from: "confirmation@rideshare.xyz",
@@ -337,7 +337,7 @@ export default {
 
     const options = {
       method: "POST",
-      url: "https://infinite-eyrie-32849.herokuapp.com/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
+      url: "hhttps://black-star-4232.fly.dev/https://driver-vehicle-licensing.api.gov.uk/vehicle-enquiry/v1/vehicles",
       headers: {
         "content-type": "application/json",
         "x-api-key": import.meta.env.VITE_VES,
