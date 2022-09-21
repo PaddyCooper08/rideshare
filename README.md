@@ -4,7 +4,7 @@
 
 ## About
 #### Other components:
-[cors-anywhere proxy](https://infinite-eyrie-32849.herokuapp.com), code is [here](https://github.com/Rob--W/cors-anywhere) \
+[cors-anywhere proxy](https://black-star-4232.fly.dev/), code is [here](https://github.com/Rob--W/cors-anywhere) \
 [my expressjs email server](https://github.com/PaddyCooper08/emailServer)
 
 ## Tech Stack
@@ -36,8 +36,8 @@
   - Source code hosted at https://github.com/PaddyCooper08/rideshare
   - built with [vite](http://vitejs.dev)
   - Live demo hosted by [vercel](https://vercel.com/dashboard)
-  - My [cors-anywhere](https://github.com/Rob--W/cors-anywhere) proxy hosted by [heroku](https://www.heroku.com)
-  - My custom nodejs email server hosted by [heroku](https://www.heroku.com)
+  - My [cors-anywhere](https://github.com/Rob--W/cors-anywhere) proxy hosted by [fly](https://www.fly.io)
+  - My custom nodejs email server hosted by [fly](https://www.fly.io)
 
 ## Credits:
 
